@@ -1,0 +1,22 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: hr-app
+  cloud:
+    zookeeper:
+      discovery:
+        enabled: true
+      connect-string: localhost:2181
+      
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    restart:
+      enabled: true
+    shutdown:
+       enabled: true
